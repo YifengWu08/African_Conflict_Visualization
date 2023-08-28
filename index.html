@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>African Continent Interactive Map</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="interactive-panel">
+        <label for="year-dropdown">Select Year:</label>
+        <select id="year-dropdown">
+            <option value="1997">1997</option>
+            <option value="1998">1998</option>
+            <option value="1999">1999</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option> 
+        </select>
+    </div>
+
+    <div id="color-mode">
+        <button id="by-fatalities">Color by Fatalities</button>
+        <button id="by-occurrences">Color by Occurrences</button>
+    </div>
+
+    <div id="legend-wrapper">
+        <div class="legend-container">
+            <div>Fatalities:</div>
+            <svg id="legend-fatalities" width="300" height="90"></svg>
+        </div>
+        
+        <div class="legend-container">
+            <div>Conflicts:</div>
+            <svg id="legend-occurrences" width="300" height="90"></svg>
+        </div>
+    </div>
+
+    <!-- <div id="content-container">
+        <svg id="africa-map" width="960" height="600"></svg>
+        <div id="histogram-container">
+            <svg id="histogram" width="700" height="600"></svg>
+        </div>
+    </div> -->
+
+    <div id="content-container">
+        <svg id="africa-map" width="960" height="600"></svg>
+        
+        <!-- Introduce a new container for the two charts -->
+        <div id="charts-container">
+            <div id="histogram-container">
+                <svg id="histogram" width="700" height="600"></svg>
+            </div>
+            <div id="actor-toggle">
+                <button id="actor1-toggle">Top 5 Actor 1 & Ally</button>
+                <button id="actor2-toggle">Top 5 Actor 2 & Ally</button>
+            </div>
+            <div id="bar-chart-container">
+                <svg id="bar-chart" width="700" height="600"></svg>
+            </div>
+        </div>
+    </div>    
+
+
+    <div id="tooltip" style="position: absolute; 
+    display: none; background-color: white; padding: 10px; 
+    border: 1px solid black;">
+    </div>
+
+    
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>
+
+
